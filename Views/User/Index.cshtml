@@ -1,0 +1,17 @@
+<h1>Добро пожаловать</h1>
+<h4>@User.Identity.Name</h4>
+
+<a class="btn btn-primary" asp-action="About" asp-controller="User">О себе</a>
+
+<form method="post" asp-controller="Account" asp-action="Logout">
+    <input type="submit" value="Выход" class="btn btn-danger" />
+</form>
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Search" asp-controller="User" method="POST">
+            <input class="form-control" name="search" placeholder="Найти по почте" type="text" />
+            <input type="submit" value="Найти" class="btn btn-secondary" />
+        </form>
+    </div>
+</div>
